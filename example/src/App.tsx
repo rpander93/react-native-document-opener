@@ -23,7 +23,7 @@ export default function App() {
   const handleOnOptionsPress = async () => {
     try {
       const result = await downloadFile();
-      await DocumentOpener.presentOptionsAsync(result.uri, result.mimeType ?? undefined);
+      await DocumentOpener.presentOptionsAsync(result.uri);
     } catch (error) {
       console.error(error);
     }

@@ -26,12 +26,10 @@ describe('DocumentOpener', () => {
 
   it('opens document options using the native module', () => {
     const filePath = 'file:///data/0/emulated/com.example.reactnativedocumentopener/files/example.mp4';
-    const mimeType = 'video/mp4';
-
-    DocumentOpener.presentOptionsAsync(filePath, mimeType);
+    DocumentOpener.presentOptionsAsync(filePath);
 
     const spy = jest.spyOn(NativeModules.DocumentOpener, 'presentOptionsAsync');
-    expect(spy).toHaveBeenCalledWith(filePath.substr(7), mimeType);
+    expect(spy).toHaveBeenCalledWith(filePath.substr(7));
   });
 
   it('throws error when trying to present document options on Android', () => {

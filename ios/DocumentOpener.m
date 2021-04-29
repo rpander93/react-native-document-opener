@@ -8,7 +8,6 @@ RCT_EXTERN_METHOD(openAsync:(NSString *)filePath
                   reject:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(presentOptionsAsync:(NSString *)filePath
-                  mimeType:(NSString *)mimeType
                   resolve:(RCTPromiseResolveBlock)resolve
                   reject:(RCTPromiseRejectBlock)reject)
 

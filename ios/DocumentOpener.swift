@@ -18,8 +18,8 @@ class DocumentOpener: NSObject, UIDocumentInteractionControllerDelegate {
         }
     }
     
-    @objc(presentOptionsAsync:mimeType:resolve:reject:)
-    func presentOptionsAsync(_ filePath: String, mimeType: String?, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
+    @objc(presentOptionsAsync:resolve:reject:)
+    func presentOptionsAsync(_ filePath: String, resolve: @escaping RCTPromiseResolveBlock, reject: @escaping RCTPromiseRejectBlock) -> Void {
         documentController = UIDocumentInteractionController(url: URL.init(fileURLWithPath: filePath))
         documentController?.delegate = self
                 

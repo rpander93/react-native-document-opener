@@ -1,6 +1,6 @@
 {
   "name": "react-native-document-opener",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Opens documents with their native previewers on Android and iOS",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -111,19 +111,7 @@
     "extends": [
       "@react-native-community",
       "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
+    ]
   },
   "eslintIgnore": [
     "node_modules/",

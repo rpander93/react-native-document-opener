@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { Button, StyleSheet, View } from 'react-native';
-import * as FileSystem from 'expo-file-system';
-import * as DocumentOpener from 'react-native-document-opener';
+import * as React from "react";
+import { Button, StyleSheet, View } from "react-native";
+import * as FileSystem from "expo-file-system";
+import * as DocumentOpener from "react-native-document-opener";
 
 export default function App() {
   const downloadFile = () => {
     return FileSystem.downloadAsync(
-      'http://techslides.com/demos/sample-videos/small.mp4',
-      FileSystem.documentDirectory + 'small-video.mp4'
+      "http://techslides.com/demos/sample-videos/small.mp4",
+      FileSystem.documentDirectory + "small-video.mp4"
     );
   };
 
@@ -41,8 +41,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
   spacer: {
     height: 20,

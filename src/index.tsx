@@ -1,7 +1,7 @@
-import { NativeModules, Platform } from 'react-native';
+import { NativeModules, Platform } from "react-native";
 
 function cleanPath(filePath: string) {
-  return filePath.replace('file://', '');
+  return filePath.replace("file://", "");
 }
 
 export function openAsync(filePath: string, mimeType?: string): Promise<void> {
@@ -9,6 +9,6 @@ export function openAsync(filePath: string, mimeType?: string): Promise<void> {
 }
 
 export function presentOptionsAsync(filePath: string): Promise<void> {
-  if (Platform.OS === 'android') throw new Error('presentOptionsAsync is not supported on Android');
+  if (Platform.OS === "android") throw new Error("presentOptionsAsync is not supported on Android");
   return NativeModules.DocumentOpener.presentOptionsAsync(cleanPath(filePath));
 }

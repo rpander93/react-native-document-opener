@@ -5,7 +5,9 @@ require_relative '../node_modules/react-native-unimodules/cocoapods.rb'
 platform :ios, '11.0'
 
 target 'DocumentOpenerExample' do
-  use_unimodules!
+  use_unimodules!(exclude: [
+    "expo-permissions"
+  ])
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])

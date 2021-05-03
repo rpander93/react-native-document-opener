@@ -3,5 +3,5 @@ apply from: '../node_modules/react-native-unimodules/gradle.groovy'; includeUnim
 apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
 include ':app'
 
-include ':reactnativedocumentopener'
-project(':reactnativedocumentopener').projectDir = new File(rootProject.projectDir, '../../android')
+include ':react-native-document-opener'
+project(':react-native-document-opener').projectDir = new File(rootProject.projectDir, '../../android')

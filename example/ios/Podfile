@@ -6,6 +6,8 @@ platform :ios, '11.0'
 
 target 'DocumentOpenerExample' do
   use_unimodules!(exclude: [
+    "expo-constants",
+    "expo-image-loader",
     "expo-permissions"
   ])
   config = use_native_modules!

@@ -37,7 +37,7 @@ class DocumentOpener: NSObject, UIDocumentInteractionControllerDelegate {
     
     // MARK: -UIDocumentInteractionControllerDelegate
     func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
-        return UIApplication.shared.delegate!.window!!.rootViewController!
+        return RCTPresentedViewController()!
     }
     
     func documentInteractionControllerDidEndPreview(_ controller: UIDocumentInteractionController) {
